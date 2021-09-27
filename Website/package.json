@@ -1,0 +1,23 @@
+{
+  "name": "FP-APSI-B-B06",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build src/styles.css -o public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christofferivano/FP-APSI-B-B06.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christofferivano/FP-APSI-B-B06/issues"
+  },
+  "homepage": "https://github.com/christofferivano/FP-APSI-B-B06#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.2"
+  }
+}

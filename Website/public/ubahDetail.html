@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <nav class="flex bg-black text-center">
+            <div class="w-3/5">
+                <ul class="flex justify-center">
+                    <li class="px-8 py-4 text-white font-semibold hover:text-gray-300 text-xl">
+                        <a href="">
+                            <img src="/public/images/senikersku.webp" alt="" class="h-10">
+                        </a>
+                    </li>
+                    <li class="px-8 py-5 text-white font-semibold hover:text-gray-300 text-l">
+                        <a href="/public/cari_barang.html" class="drowdown">AIR JORDAN</a>
+                    </li>
+                    <li class="px-8 py-5 text-white font-semibold hover:text-gray-300 text-l">
+                        <a href="/public/cari_barang.html">ADIDAS YEEZY</a>
+                    </li>
+                    <li class="px-8 py-5 text-white font-semibold hover:text-gray-300 text-l">
+                        <a href="/public/cari_barang.html">NIKE</a>
+                    </li>
+                    <li class="px-8 py-5 text-white font-semibold hover:text-gray-300 text-l">
+                        <a href="/public/cari_barang.html">BROWSE ALL</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="w-2/5 py-5">
+                <ul class="flex justify-end px-20 mr-10">
+                    <li class="px-2 text-white font-semibold hover:text-gray-300">
+                        <a href="/public/wishlist.html"><img src="/public/images/wishlist.png" alt="" class="w-8 h-8"></a>
+                    </li>
+                    <li class="px-2 text-white font-semibold hover:text-gray-300">
+                        <a href="/public/shopping_cart.html"><img src="/public/images/cart.png" alt="" class="w-8 h-8"></a>
+                    </li>
+                    <li class="px-2 text-white font-semibold hover:text-gray-300">
+                        <a href="/public/akun.html"><img src="/public/images/account.png" alt="" class="w-8 h-8"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="flex flex-col items-end border-b-2 border-gray-200">
+            <h2 class="text-gray-400 py-4 px-20 mr-10">Home / My Account</h2>
+        </div>
+        <div class="grid grid-cols-3">
+            <div class="grid-span-1 border-r-2 border-gray-200">
+                <ul class="pt-16 pl-28">
+                    <li>
+                        <button class="bg-black rounded-md px-6 py-2 text-lg text-white font-semibold" type="button">
+                            <a href="/public/akun.html">Akun Saya</a>
+                        </button>
+                    </li>
+                    <li class="pt-8">
+                        <button class="bg-white rounded-md px-6 py-2 text-lg text-black font-semibold hover:bg-black hover:text-white" type="button">
+                            <a href="/public/lacak_pemesanan.html">Lacak Pemesanan</a>
+                        </button>
+                    </li>
+                    <li class="pt-8">
+                        <button class="bg-white rounded-md px-6 py-2 text-lg text-black font-semibold hover:bg-black hover:text-white" type="button">
+                            <a href="/public/wishlist.html">Wishlist</a>
+                        </button>
+                    </li>
+                    <li class="pt-8">
+                        <button class="bg-white rounded-md px-6 py-2 text-lg text-black font-semibold hover:bg-black hover:text-white" type="button">
+                            <a href="/public/riwayat_pembelian.html">Riwayat Pembelian</a>
+                        </button>
+                    </li>
+                    <li class="pt-8">
+                        <button class="bg-white rounded-md px-6 py-2 text-lg text-black font-semibold hover:bg-black hover:text-white" type="button">
+                            <a href="/public/signin.html">Sign Out</a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-span-2 col-start-2">
+                <div class="grid grid-col-3 pt-16 pl-36">
+                    <h1 class="text-3xl font-bold">
+                        Ganti Detail Akun
+                    </h1>
+                    <ul class="pt-6 text-lg">
+                        <li class="pt-6">
+                            <span class="mr-20 font-bold">Nama</span>
+                            <span class="ml-2">:</span>
+                            <span class="ml-5"><input class="border-2 border-gray-500 rounded w-1/2 py-1 px-3 text-gray-700" id="name" type="text" placeholder="Nama"></span>
+                        </li>
+                        <li class="pt-6">
+                            <span class="mr-20 font-bold">Email</span>
+                            <span class="ml-3">:</span>
+                            <span class="ml-5"><input class="border-2 border-gray-500 rounded w-1/2 py-1 px-3 text-gray-700" id="email" type="email" placeholder="YourEmail@gmail.com"></span>
+                        </li>
+                        <li class="pt-6">
+                            <span class="mr-10 font-bold">No Telepon</span>
+                            <span class="">:</span>
+                            <span class="ml-5"><input class="border-2 border-gray-500 rounded w-1/2 py-1 px-3 text-gray-700" id="no_telp" type="text" placeholder=""></span>
+                        </li>
+                        <li class="pt-6">
+                            <span class="mr-16 font-bold">Alamat</span>
+                            <span class="ml-3">:</span>
+                            <span class="ml-5"><input class="border-2 border-gray-500 rounded w-1/2 py-1 px-3 text-gray-700" id="alamat" type="text" placeholder=""></span>
+                        </li>
+                        <li class="pt-6">
+                            <span class="mr-14 font-bold">Kode Pos</span>
+                            <span class="ml-1">:</span>
+                            <span class="ml-5"><input class="border-2 border-gray-500 rounded w-1/2 py-1 px-3 text-gray-700" id="kode_pos" type="text" placeholder="Nama"></span>
+                        </li>
+                        <div class="flex flex-col items-end pt-14 px-48 mr-20">
+                            <button class="bg-black rounded-md px-6 py-2 text-sm text-white font-semibold" type="button">
+                                <a href="/public/akun.html">Selesai</a>
+                            </button>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
