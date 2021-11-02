@@ -4,53 +4,630 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script>
+        var cont=0;
+        function loopSlider(){
+        var xx = setInterval(function(){
+            switch(cont)
+            {
+            case 0:{
+                $("#slider-2").fadeOut(400);
+                $("#slider-1").delay(400).fadeIn(400);
+                $("#sButton1").removeClass("bg-gray-800");
+                $("#sButton2").addClass("bg-gray-800");
+                $("#slider-4").fadeOut(400);
+                $("#slider-3").delay(400).fadeIn(400);
+                $("#sButton4").removeClass("bg-gray-800");
+                $("#sButton3").addClass("bg-gray-800");
+                $("#slider-6").fadeOut(400);
+                $("#slider-5").delay(400).fadeIn(400);
+                $("#sButton6").removeClass("bg-gray-800");
+                $("#sButton5").addClass("bg-gray-800");
+            cont=1;
+            
+            break;
+            }
+            case 1:
+            {
+            
+                $("#slider-2").fadeOut(400);
+                $("#slider-1").delay(400).fadeIn(400);
+                $("#sButton2").removeClass("bg-gray-800");
+                $("#sButton1").addClass("bg-gray-800");
+                $("#slider-4").fadeOut(400);
+                $("#slider-3").delay(400).fadeIn(400);
+                $("#sButton4").removeClass("bg-gray-800");
+                $("#sButton3").addClass("bg-gray-800");
+                $("#slider-6").fadeOut(400);
+                $("#slider-5").delay(400).fadeIn(400);
+                $("#sButton6").removeClass("bg-gray-800");
+                $("#sButton5").addClass("bg-gray-800");
+               
+            cont=0;
+            
+            break;
+            }
+            
+            
+            }},8000);
+    
+    }
+    
+    function reinitLoop(time){
+    clearInterval(xx);
+    setTimeout(loopSlider(),time);
+    }
+    
+    
+    
+        function sliderButton1(){
+    
+        $("#slider-2").fadeOut(400);
+        $("#slider-1").delay(400).fadeIn(400);
+        $("#sButton2").removeClass("bg-gray-800");
+        $("#sButton1").addClass("bg-gray-800");
+        reinitLoop(4000);
+        cont=0;
+        }
+        
+        function sliderButton2(){
+        $("#slider-1").fadeOut(400);
+        $("#slider-2").delay(400).fadeIn(400);
+        $("#sButton1").removeClass("bg-gray-800");
+        $("#sButton2").addClass("bg-gray-800");
+        reinitLoop(4000);
+        cont=1;
+        }
+
+    function sliderButton3(){
+    
+    $("#slider-4").fadeOut(400);
+    $("#slider-3").delay(400).fadeIn(400);
+    $("#sButton4").removeClass("bg-gray-800");
+    $("#sButton3").addClass("bg-gray-800");
+    reinitLoop(4000);
+    cont=0;
+    }
+    
+    function sliderButton4(){
+    $("#slider-3").fadeOut(400);
+    $("#slider-4").delay(400).fadeIn(400);
+    $("#sButton3").removeClass("bg-gray-800");
+    $("#sButton4").addClass("bg-gray-800");
+    reinitLoop(4000);
+    cont=1;
+    }
+
+    function sliderButton5(){
+    
+    $("#slider-6").fadeOut(400);
+    $("#slider-5").delay(400).fadeIn(400);
+    $("#sButton6").removeClass("bg-gray-800");
+    $("#sButton5").addClass("bg-gray-800");
+    reinitLoop(4000);
+    cont=0;
+    }
+    
+    function sliderButton6(){
+    $("#slider-5").fadeOut(400);
+    $("#slider-6").delay(400).fadeIn(400);
+    $("#sButton5").removeClass("bg-gray-800");
+    $("#sButton6").addClass("bg-gray-800");
+    reinitLoop(4000);
+    cont=1;
+    }
+
+    
+        $(document).ready(function(){
+            $("#slider-2").hide();
+            $("#slider-4").hide();
+            $("#slider-6").hide();
+            $("#sButton1").addClass("bg-gray-800");
+            $("#sButton3").addClass("bg-gray-800");
+            $("#sButton5").addClass("bg-gray-800");
+            loopSlider();
+        });
+    
+      
+      </script>
 </head>
-<body class="bg-gray-100">
-    <div class="grid grid-cols-5 h-full">
-        <div class="flex flex-col col-start-1 col-span-3">
-            <div class="py-10 text-center">
-                <h1 class="text-3xl font-bold">
-                    Sign In to Senikersku
-                </h1>
+<body>
+    <div>
+        <nav class="flex bg-black text-center">
+            <div class="w-3/5">
+                <ul class="flex justify-center">
+                    <li class="px-8 py-4 text-white font-semibold hover:text-gray-300 text-xl">
+                        <a href="">
+                            <img src="/public/images/senikersku.webp" alt="" class="h-10">
+                        </a>
+                    </li>
+                    <li class="px-8 py-5 text-white font-semibold hover:text-gray-300 text-l">
+                        <a href="/public/cari_barang.html" class="drowdown">AIR JORDAN</a>
+                    </li>
+                    <li class="px-8 py-5 text-white font-semibold hover:text-gray-300 text-l">
+                        <a href="/public/cari_barang.html">ADIDAS YEEZY</a>
+                    </li>
+                    <li class="px-8 py-5 text-white font-semibold hover:text-gray-300 text-l">
+                        <a href="/public/cari_barang.html">NIKE</a>
+                    </li>
+                    <li class="px-8 py-5 text-white font-semibold hover:text-gray-300 text-l">
+                        <a href="/public/cari_barang.html">BROWSE ALL</a>
+                    </li>
+                </ul>
             </div>
-            <div class="px-48 py-10">
-                <h2 class="text-xl font-semibold pb-2">Email</h2>
-                <input class="shadow-lg appearance-none rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="YourEmail@gmail.com">
+            <div class="w-2/5 py-5">
+                <ul class="flex justify-end px-20 mr-10">
+                    <li class="px-2 text-white font-semibold hover:text-gray-300">
+                        <a href="/public/wishlist.html"><img src="/public/images/wishlist.png" alt="" class="w-8 h-8"></a>
+                    </li>
+                    <li class="px-2 text-white font-semibold hover:text-gray-300">
+                        <a href="/public/shopping_cart.html"><img src="/public/images/cart.png" alt="" class="w-8 h-8"></a>
+                    </li>
+                    <li class="px-2 text-white font-semibold hover:text-gray-300">
+                        <a href="/public/akun.html"><img src="/public/images/account.png" alt="" class="w-8 h-8"></a>
+                    </li>
+                </ul>
             </div>
-            <div class="px-48">
-                <h2 class="text-xl font-semibold pb-2">Password</h2>
-                <input class="shadow-lg appearance-none rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="8 Characters Minimum">
-            </div>
-            <div class="px-48 pt-4">
-                <a href="" class="text-l font-semibold pb-2 underline text-blue-700">Forgot Password</a>
-            </div>
-            <span class="text-gray-400 px-48 pt-24">Or sign up with</span>
-            <div class="flex px-48">
-                <div class="flex items-end">
-                    <button class="bg-white rounded-full w-8 h-8" type="button">
-                        <a href="/public/landing_page.html"><img src="/public/images/facebook.png" alt="" class="w-8 h-8"></a>
-                    </button>
-                    <button class="bg-white rounded-full w-8 h-8 ml-10" type="button">
-                        <a href="/public/landing_page.html"><img src="/public/images/google.png" alt="" class="w-8 h-8"></a>
-                    </button>
+        </nav>
+        <img src="/public/images/landing_page.png" alt="">
+        <div class="sliderAx w-full h-96 px-48 py-10">
+            <div class="flex justify-between px-5">
+                <div>
+                    <h1 class="text-2xl font-bold">AIR JORDAN</h1>
                 </div>
-                <div class="flex flex-col items-end ml-72">
-                    <button class="bg-black rounded-xl px-6 py-2 text-sm border-4 text-white text-xl font-semibold" type="button">
-                        <a href="/public/landing_page.html">Sign In</a>
-                    </button>
+                <div>
+                    <a href="" class="underline">view all</a>
                 </div>
-                <!-- <div class="pt-14">
-                    <img src="/public/images/google.png" alt="" class="w-8">
-                </div> -->
             </div>
-            <div class="px-48 pt-24">
-                <span class="font-semibold">Don't have an account?</h2>
-                <a href="/public/signup.html"><span class="font-semibold text-blue-700 underline">Sign up</span></a>
+            
+            <div id="slider-3" class="container mx-auto">
+                <div class="py-16 grid grid-cols-1 xl:grid-cols-5 gap-5">
+                    <!--Card 1-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/og_red.png" alt="Mountain">
+                        </div>
+                    <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 OG Red</div>
+                        <p class="text-gray-700">
+                        Rp 1.500.000,00
+                        </p>
+                    </div>
+                    </div>
+                    <!--Card 2-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/og_red.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 OG Red</div>
+                        <p class="text-gray-700">
+                        Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 3-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/og_red.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 OG Red</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 4-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/og_red.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 OG Red</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 5-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/og_red.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 OG Red</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div id="slider-4" class="container mx-auto">
+                <div class="py-16 grid grid-cols-1 xl:grid-cols-5 gap-5">
+                    <!--Card 6-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/aj1PSG.png" alt="Mountain">
+                        </div>
+                    <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 PSG</div>
+                        <p class="text-gray-700">
+                        Rp 1.500.000,00
+                        </p>
+                    </div>
+                    </div>
+                    <!--Card 7-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/aj1PSG.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 PSG</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 8-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/aj1PSG.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 PSG</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 9-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/aj1PSG.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 PSG</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 10-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/aj1PSG.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 PSG</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div style="background-image: url('/public/images/signin.png')" class="bg-cover bg-local relative col-span-2 col-start-4">
-            <!-- <img src="/public/images/signup.png" alt="" class="object-contain"> -->
+        <div class="flex justify-between w-12 mx-auto pb-2">
+            <button id="sButton3" onclick="sliderButton3()" class="bg-gray-400 rounded-full w-4 pb-2 " ></button>
+            <button id="sButton4" onclick="sliderButton4() " class="bg-gray-400 rounded-full w-4 p-2"></button>
         </div>
+        <div class="sliderAx w-full h-96 px-48 py-10">
+            <div class="flex justify-between px-5">
+                <div>
+                    <h1 class="text-2xl font-bold">ADIDAS YEEZY</h1>
+                </div>
+                <div>
+                    <a href="" class="underline">view all</a>
+                </div>
+            </div>
+            
+            <div id="slider-5" class="container mx-auto">
+                <div class="py-16 grid grid-cols-1 xl:grid-cols-5 gap-5">
+                    <!--Card 1-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/bred.png" alt="Mountain">
+                        </div>
+                    <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 OG Red</div>
+                        <p class="text-gray-700">
+                        Rp 1.500.000,00
+                        </p>
+                    </div>
+                    </div>
+                    <!--Card 2-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/bred.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 OG Red</div>
+                        <p class="text-gray-700">
+                        Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 3-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/bred.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 OG Red</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 4-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/bred.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 OG Red</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 5-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/bred.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 OG Red</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div id="slider-6" class="container mx-auto">
+                <div class="py-16 grid grid-cols-1 xl:grid-cols-5 gap-5">
+                    <!--Card 6-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/boost_700.png" alt="Mountain">
+                        </div>
+                    <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 PSG</div>
+                        <p class="text-gray-700">
+                        Rp 1.500.000,00
+                        </p>
+                    </div>
+                    </div>
+                    <!--Card 7-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/boost_700.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 PSG</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 8-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/boost_700.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 PSG</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 9-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/boost_700.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 PSG</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 10-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/boost_700.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Air Jordan 1 PSG</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between w-12 mx-auto pb-2">
+            <button id="sButton5" onclick="sliderButton5()" class="bg-gray-400 rounded-full w-4 pb-2 " ></button>
+            <button id="sButton6" onclick="sliderButton6() " class="bg-gray-400 rounded-full w-4 p-2"></button>
+        </div>
+        <div class="sliderAx w-full h-96 px-48 py-10">
+            <div class="flex justify-between px-5">
+                <div>
+                    <h1 class="text-2xl font-bold">NIKE</h1>
+                </div>
+                <div>
+                    <a href="" class="underline">view all</a>
+                </div>
+            </div>
+            
+            <div id="slider-1" class="container mx-auto">
+                <div class="py-16 grid grid-cols-1 xl:grid-cols-5 gap-5">
+                    <!--Card 1-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/airforce1.png" alt="Mountain">
+                        </div>
+                    <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Nike Air Force 1</div>
+                        <p class="text-gray-700">
+                        Rp 1.500.000,00
+                        </p>
+                    </div>
+                    </div>
+                    <!--Card 2-->
+                    <div class="overflow-hidden w-full h-48">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/airforce1.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Nike Air Force 1</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 3-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/airforce1.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Nike Air Force 1</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 4-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/airforce1.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Nike Air Force 1</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 5-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/airforce1.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Nike Air Force 1</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div id="slider-2" class="container mx-auto">
+                <div class="py-16 grid grid-cols-1 xl:grid-cols-5 gap-5">
+                    <!--Card 6-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/gd.png" alt="Mountain">
+                        </div>
+                    <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Nike Air Force 1 GD</div>
+                        <p class="text-gray-700">
+                        Rp 1.500.000,00
+                        </p>
+                    </div>
+                    </div>
+                    <!--Card 7-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/gd.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Nike Air Force 1 GD</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 8-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/gd.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Nike Air Force 1 GD</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 9-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/gd.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Nike Air Force 1 GD</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                    <!--Card 10-->
+                    <div class="overflow-hidden">
+                        <div class="w-56 h-34 object-cover float-left">
+                            <img class="w-56 h-34 object-cover float-left" src="/public/images/gd.png" alt="Mountain">
+                        </div>
+                        <div class="px-6 py-4 justify-center align-center items-center text-center">
+                        <div class="font-semibold text-xl mb-2">Nike Air Force 1 GD</div>
+                        <p class="text-gray-700">
+                            Rp 1.500.000,00
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between w-12 mx-auto pb-2 mb-16">
+            <button id="sButton1" onclick="sliderButton1()" class="bg-gray-400 rounded-full w-4 pb-2 " ></button>
+            <button id="sButton2" onclick="sliderButton2() " class="bg-gray-400 rounded-full w-4 p-2"></button>
+        </div>
+        <footer class="footer bg-black relative pt-1 border-b-2 border-blue-700">
+            <div class="container mx-auto px-64">
+                <div class="sm:flex sm:mt-8">
+                    <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
+                        <div class="flex flex-col">
+                            <img src="/public/images/senikersku.webp" alt="" class="h-20">
+                            <span class="font-bold text-white uppercase mb-2 text-center">Senikersku</span>
+                            <span class="my-2"><a href="#" class="text-gray-300  text-md hover:text-blue-500">alamat</a></span>
+                            <span class="my-2"><a href="#" class="text-gray-300  text-md hover:text-blue-500">ig</a></span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-white uppercase mt-4 md:mt-0 mb-2">Customer Service</span>
+                            <span class="my-2"><a href="#" class="text-gray-300  text-md hover:text-blue-500">Contact Us</a></span>
+                            <span class="my-2"><a href="#" class="text-gray-300  text-md hover:text-blue-500">Confirmation Payment</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mx-auto">
+                <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
+                    <div class="text-center py-3">
+                        <p class="text-sm text-white font-bold mb-2">
+                            © 2021 by B06
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

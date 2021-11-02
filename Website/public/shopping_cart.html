@@ -67,9 +67,9 @@
                             <li class="mt-5">
                                 <div class="flex flex-col items-end">
                                     <div class="flex">
-                                        <button class="border-2 border-gray-500 px-2.5">-</button>
-                                        <div class="border-2 border-gray-500 px-2.5">1</div>
-                                        <button class="border-2 border-gray-500 px-2">+</button>
+                                        <button class="border-2 border-gray-500 px-2.5" onclick="document.getElementById('amount').innerText--">-</button>
+                                        <div class="border-2 border-gray-500 px-2.5" id="amount">1</div>
+                                        <button class="border-2 border-gray-500 px-2" onclick="document.getElementById('amount').innerText++">+</button>
                                     </div>
                                 </div>
                             </li>
@@ -94,9 +94,9 @@
                             <li class="mt-5">
                                 <div class="flex flex-col items-end">
                                     <div class="flex">
-                                        <button class="border-2 border-gray-500 px-2.5">-</button>
-                                        <div class="border-2 border-gray-500 px-2.5">1</div>
-                                        <button class="border-2 border-gray-500 px-2">+</button>
+                                        <button class="border-2 border-gray-500 px-2.5" onclick="document.getElementById('amount2').innerText--">-</button>
+                                        <span class="border-2 border-gray-500 px-2.5" id="amount2">1</span>
+                                        <button class="border-2 border-gray-500 px-2" onclick="document.getElementById('amount2').innerText++">+</button>
                                     </div>
                                 </div>
                             </li>
@@ -135,9 +135,8 @@
                                 <a href="/public/checkout.html">CONTINUE TO CHECKOUT</a>
                             </button>
                         </div>
-                        <div class="px-12 pt-5 pb-24 mb-2">
-                            <h2 class="text-sm font-light">Harga dan biaya pengiriman tidak dikonfirmasi</h2>
-                            <h2 class="text-sm font-light">sampai anda melakukan checkout.</h2>
+                        <div class="px-12 pt-5 pb-28 mb-2">
+                            <h2 class="text-sm font-light pt-2">Price and Shipping Fee won't be confirmed until checkout.</h2>
                         </div>
                     </div>
                 </div>

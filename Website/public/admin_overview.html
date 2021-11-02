@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .shoes:hover #hoveritem1{
+            display:none;
+        }
+        .shoes:hover #hoveritem2{
+            display: block;
+        }
+        .shoes:hover #hovertext{
+            margin-left: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="grid grid-cols-12">
+            <div class="col-span-3 h-screen bg-black">
+                <ul class="pt-10 flex flex-col items-center">
+                    <li>
+                        <img src="/public/images/senikersku.webp" alt="" class="w-40">
+                    </li>
+                    <li class="mt-2">
+                        <h2 class="text-white font-semibold text-lg">
+                            Welcome, Admin001
+                        </h2>
+                    </li>
+                    <li class="mt-20 px-10 w-full h-12">
+                        <button class="shoes bg-black border-2 border-white rounded-md px-2 py-2 w-full h-12 text-white hover:bg-white hover:border-black hover:text-black">
+                            <a href="/public/admin_home.html" class="flex items-center">
+                                <img src="/public/images/home-white.png" alt="" id="hoveritem1" class="relative w-8 pl-1">
+                                <img src="/public/images/home-black.png" alt="" id="hoveritem2" class="absolute w-8 pl-1 hidden">
+                                <span class="pl-4" id="hovertext">Home</span>
+                            </a>
+                        </button>
+                    </li>
+                    <li class="mt-6 px-10 w-full h-12">
+                        <button class="shoes bg-black border-2 border-white rounded-md px-2 py-2 w-full h-12 text-white hover:bg-white hover:border-black hover:text-black">
+                            <a href="/public/admin_additem.html" class="flex items-center">
+                                <img src="/public/images/shoes-white.png" alt="" id="hoveritem1" class="relative w-8 pl-1">
+                                <img src="/public/images/shoes-black.png" alt="" id="hoveritem2" class="absolute w-8 pl-1 hidden">
+                                <span class="pl-4" id="hovertext">Add Item</span>
+                            </a>
+                        </button>
+                    </li>
+                    <li class="mt-6 px-10 w-full h-12">
+                        <button class="bg-white rounded-md px-2 py-2 w-full h-12">
+                            <a href="/public/admin_overview.html" class="flex items-center">
+                                <img src="/public/images/overview-black.png" alt="" class="w-8 pl-1">
+                                <span class="pl-4">Overview</span>
+                            </a>
+                        </button>
+                    </li>
+                    <li class="mt-6 px-10 w-full h-12">
+                        <button class="shoes bg-black border-2 border-white rounded-md px-2 py-2 w-full h-12 text-white hover:bg-white hover:border-black hover:text-black">
+                            <a href="/public/admin_orderStatus.html" class="flex items-center">
+                                <img src="/public/images/order-white.png" alt="" id="hoveritem1" class="relative w-8 pl-1">
+                                <img src="/public/images/order-black.png" alt="" id="hoveritem2" class="absolute w-8 pl-1 hidden">
+                                <span class="pl-4" id="hovertext">Change Order Status</span>
+                            </a>
+                        </button>
+                    </li>
+                    <li class="mt-44 px-10 w-full h-10">
+                        <button class="bg-red-700 rounded-md px-2 py-2 w-full h-10 text-white hover:bg-red-800 hover:text-gray-200">
+                            <a href="/public/signin.html" class="flex flex-col items-center">
+                                <span class="font-bold text-md">Sign Out</span>
+                            </a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-span-9 col-start-4">
+                <div class="px-8 pt-5">
+                    <div class="flex flex-col items-center">
+                        <h2 class="text-xl font-bold">
+                            Buyer's Data Over Month 2020
+                        </h2>
+                        <img src="/public/images/grafik1.png" alt="" class="pt-2 w-3/4">
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="flex h-28 pt-6">
+                            <div class="px-5">
+                                <div class="rounded-md bg-gray-800 h-28">
+                                    <div class="flex flex-col items-center px-5 text-white">
+                                        <h2 class="font-medium text-md mt-2">Total Buyers</h2>
+                                        <h1 class="font-extrabold text-2xl mt-5">5241</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-5">
+                                <div class="rounded-md bg-gray-800 h-28">
+                                    <div class="flex flex-col items-center px-5 text-white">
+                                        <h2 class="font-medium text-md mt-2">Total Accounts</h2>
+                                        <h1 class="font-extrabold text-2xl mt-5">5241</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-5">
+                                <div class="rounded-md bg-gray-800 h-28">
+                                    <div class="flex flex-col items-center px-5 text-white">
+                                        <h2 class="font-medium text-md mt-2">Most Payment Complete</h2>
+                                        <h1 class="font-extrabold text-2xl mt-5">310</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center pt-8">
+                        <h2 class="text-xl font-bold">
+                            Buyer's Data Over Month 2021
+                        </h2>
+                        <img src="/public/images/grafik2.png" alt="" class="pt-2 w-3/4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
