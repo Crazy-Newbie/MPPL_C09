@@ -1,5 +1,9 @@
 module.exports = {
-  purge: [],
+  purge: [
+    './resources/**/*.blade.php',
+    './resources/**/*.js',
+    './resources/**/*.vue',
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -30,6 +34,15 @@ module.exports = {
         '18': '18',
         '19': '19',
         '20': '20',
+      },
+      width: {
+        '1/7': '14.2857143%',
+        '2/7': '28.5714286%',
+        '3/7': '42.8571429%',
+        '4/7': '57.1428571%',
+        '5/7': '71.4285714%',
+        '6/7': '85.7142857%',
+        '98' : '40rem',
       },
     },
   },
